@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#include <conio.h>
+
+int main () {
+        setlocale(LC_ALL,"Portuguese");
+        float a, b, valor;
+        const char ESC = 27;
+
+    do {
+        printf ("Informe o salário do funcionário: ");
+        scanf ("%f",&a);
+
+  b = a * 30.00 / 100.00;
+
+    if ((a < 500.00) && (a > 0)){
+        printf("\nVocê recebeu um aumento de R$ %2.2f",b);
+            valor = a + b;
+                printf("\nSeu salário reajustado é de R$ %2.2f",valor); }
+
+            else if (a >= 500.00)
+                printf("\nVocê não têm direito ao aumento!!");
+
+                    else if (a <= 0)
+                        printf("\nVALOR INVÁLIDO!");
+
+
+    printf("\n\nPrecione ESC para terminar ou ENTER para recomeçar.\n");
+    } while (getch () != ESC);
+return 0;
+}
